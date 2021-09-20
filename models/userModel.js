@@ -28,6 +28,9 @@ const userSchema = new mongoose.Schema({
             }
         }
     ,
+    createdAt:{
+        type:String
+    },
         password:{
             type:String,
             required:true,
@@ -43,7 +46,17 @@ const userSchema = new mongoose.Schema({
         }
 });
 
+
+userSchema.pre('save',function(){
+    this.confirmPassword = undefined;
+    // data aagya schema chalega
+    // validate hojaega
+    // to ye confirmPassword ki value ko uda dega aur mogo Db mai save nhi hoga kyuki 
+    // redundant cheez hai
+// save hone sai pehle pre mongoose ka concept hai
+})
 const userModel = mongoose.model('userModel',userSchema);
+module.exports = userModel;
 
 (async function createUser(){
     let user = {
