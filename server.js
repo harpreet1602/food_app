@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 // const router = express.Router();
 app.listen('5000',function(){
-console.log('server lisrening on port 5000');
+console.log('server listening on port 5000');
 });
 
 app.use(express.json());
