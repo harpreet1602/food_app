@@ -34,6 +34,7 @@ app.get("/home",function(req,res){
     res.sendFile("./views/index.html",{root:__dirname});
 });
 app.use(express.json());
+
 // after using the express.json format then only we will get data in post method from req.body
 // in post we can put some data and that changed data will be fetched here.
 app.post('/users',(req,res)=>{
