@@ -23,3 +23,40 @@ function protectRoute(req,res,next){
     }
     }
 }
+
+
+
+
+
+
+userRouter.route(':/id')
+    .get(getuser)
+    .patch(bodychecker,updateUser).delete(bodyChecker,deleteUser);
+
+
+
+
+// jasbir sir
+async function getUsers(){
+    
+}
+
+async function createUser(){
+
+}
+
+async function getUser(){
+    let { id } = req.body;
+    try{
+
+    }
+    catch{
+
+    }
+}
+async function deleteUser(){
+
+}
+async function updateUser(){
+
+}
